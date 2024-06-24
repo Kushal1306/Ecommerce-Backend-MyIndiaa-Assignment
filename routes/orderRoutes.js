@@ -37,7 +37,7 @@ OrderRoute.post("/",authMiddleWare,async(req,res)=>{
             totalAmount
         });
         await saveOrder.save();
-        return res.status(201).json({ message: 'Product saved succesfully', saveOrder });  
+        return res.status(201).json({ message: 'Order saved succesfully', saveOrder });  
     } catch (error) {
         console.log(error);
         res.status(501).json({ error: 'Error Processing Order' });
