@@ -28,7 +28,7 @@ PaymentRoute.post('/create-order/:orderId',authMiddleWare, async (req, res) => {
 
     if(!myOrder)
         return res.status(401).json({message:'orderId doesnt exist'});
-    
+
     console.log(myOrder);
     console.log(myOrder.totalAmount);
 
@@ -77,6 +77,7 @@ PaymentRoute.post('/capture-payment/:paymentOrderId',authMiddleWare, async (req,
 
     await payment.save();
 
+ // finding if order present by Id
     const order=await Orders.findById(req.body.orderId);
     if (!order) {
         return res.status(404).json({ error: 'Order not found' });
