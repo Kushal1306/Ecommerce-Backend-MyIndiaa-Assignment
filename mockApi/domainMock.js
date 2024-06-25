@@ -34,11 +34,9 @@ domainMock.use(express.json());
 
 domainMock.get("/check", async (req, res) => {
     try {
-        const domainName = req.body.domainName;
+        const domainName = req.query.domainName;
         const response = await axios.get("https://api.domainprovider.com/v1/check", {
-            params: {
-                domainName
-            }
+            params: { domainName }
         });
         console.log(response.data);
         res.status(201).json(response.data);
@@ -51,7 +49,7 @@ domainMock.get("/check", async (req, res) => {
 domainMock.post("/register", async (req, res) => {
     try {
         const domainName = req.body.domainName;
-        const response = await axios.post("https://api.domainprovider.com/v1/register",{ domainName});
+        const response = await axios.post("https://api.domainprovider.com/v1/register", { domainName });
         console.log(response.data);
         return res.status(201).json(response.data);
     } catch (error) {
