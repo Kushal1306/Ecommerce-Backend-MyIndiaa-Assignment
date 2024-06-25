@@ -1,4 +1,4 @@
-This repository contains backend code for E-commerce Applications. It handles various Operations of Users, Products, Orders, Payments. The routes (Rest Api's) and models schemas for the same were created and handled accordingly. 
+This repository contains backend code for E-commerce Application. It handles various Operations of Users, Products, Orders, Payments. The routes (Rest Api's) and models schemas for the same were created and handled accordingly. 
 
 
 - Used JSON Web Tokens for Authentication & authorization.
@@ -11,7 +11,7 @@ which includes ( initiating payment, capturing it, refund, getting payment info 
 - Mocked Stripe's Payment Gateway using nock.
 
 - Mocked Logistic Provider's and domain provider's Api endpoints using nock by creating endpoints for 
-post shipment, tarck shipmet status, register domain, check domaininfo.
+post shipment, track shipmet status, register domain, check domaininfo.
 
 - Implemented rate limiting.
 
