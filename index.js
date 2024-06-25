@@ -32,13 +32,13 @@ app.use(morgan('dev'));
 app.use(apiLimiter);
 //app.use(morgan('combined'));
 
-app.use("/api/user",UserRoute);
-app.use("/api/product",Productroute);
-app.use("/api/order",OrderRoute);
-app.use("/api/payment",PaymentRoute);
-app.use("/api/shipment",logisticMock);
-app.use("/api/domain",domainMock);
-app.use("/api/paymentMock",paymentMock);
+app.use("/user",UserRoute);
+app.use("/product",Productroute);
+app.use("/order",OrderRoute);
+app.use("/payment",PaymentRoute);
+app.use("/shipment",logisticMock);
+app.use("/domain",domainMock);
+app.use("/paymentMock",paymentMock);
 
 app.get("/", (req, res) => {
     return res.send("Hello world");
