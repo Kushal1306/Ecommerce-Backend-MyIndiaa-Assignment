@@ -16,5 +16,7 @@ userSchema.pre('save', async function (next) {
     next();
 });
 
+userSchema.index({email:1});
+
 const Users = mongoose.model("Users", userSchema);
 export default Users;

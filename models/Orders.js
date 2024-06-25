@@ -13,6 +13,8 @@ const orderSchema = mongoose.Schema({
 
 //timestamps creates createdat, updatedat by default
 
+orderSchema.index({userId:1});
+
 const Orders = mongoose.model("Orders", orderSchema);
 
 export default Orders;

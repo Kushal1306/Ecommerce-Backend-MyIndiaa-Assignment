@@ -8,8 +8,10 @@ const ProductSchema = new mongoose.Schema({
     description: { type: String },
     category: { type: String }
 },{timestamps:true});
+
 // We can also have a image url of each product in Schema for its use in frontend purposes
 
+ProductSchema.index({name:"text",sku:1})
 
 const Products=mongoose.model("Products",ProductSchema);
 

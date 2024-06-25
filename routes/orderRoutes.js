@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt';
 import checkRole from '../middlwares/Roles.js';
 import mongoose from 'mongoose';
 import authMiddleWare from '../middlwares/Authmiddleware.js';
-import Orders from '../models/orders.js';
+import Orders from '../models/Orders.js';
 
 const OrderRoute=express.Router();
 

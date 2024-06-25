@@ -85,3 +85,4 @@ try {
 export default UserRoute;
 
 
+// we can also have a patch request to update details of the user.

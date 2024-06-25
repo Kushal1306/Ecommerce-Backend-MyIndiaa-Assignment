@@ -8,8 +8,8 @@ import authMiddleWare from '../middlwares/Authmiddleware.js';
 import Products from '../models/Products.js';
 import dotenv from 'dotenv';
 import paypal from '@paypal/checkout-server-sdk';
-import Payments from '../models/payments.js';
-import Orders from '../models/orders.js';
+import Payments from '../models/Payments.js';
+import Orders from '../models/Orders.js';
 
 dotenv.config();
 const PaymentRoute=express.Router();
