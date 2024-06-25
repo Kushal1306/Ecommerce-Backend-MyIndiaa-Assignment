@@ -10,9 +10,9 @@ import UserRoute from './routes/userRoutes.js';
 import Productroute from './routes/productRoutes.js';
 import OrderRoute from './routes/orderRoutes.js';
 import PaymentRoute from './routes/paymentRoutes.js';
-import logisticMock from './mockApi/logisticMock.js';
-import domainMock from './mockApi/domainMock.js';
-import paymentMock from './mockApi/paymentMock.js';
+// import logisticMock from './mockApi/logisticMock.js';
+// import domainMock from './mockApi/domainMock.js';
+// import paymentMock from './mockApi/paymentMock.js';
 
 dotenv.config();
 
@@ -36,9 +36,12 @@ app.use("/user",UserRoute);
 app.use("/product",Productroute);
 app.use("/order",OrderRoute);
 app.use("/payment",PaymentRoute);
-app.use("/shipment",logisticMock);
-app.use("/domain",domainMock);
-app.use("/paymentMock",paymentMock);
+
+// Mocking Routes of Domain,logistic, Payment before deploying it to vercel
+
+// app.use("/shipment",logisticMock);
+// app.use("/domain",domainMock);
+// app.use("/paymentMock",paymentMock);
 
 app.get("/", (req, res) => {
     return res.send("Hello world");
